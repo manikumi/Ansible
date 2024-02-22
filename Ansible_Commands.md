@@ -15,3 +15,9 @@ ansibe-playbook Playbook_yml_file --limit private_ip_of_server
 
 # default host of ansible
 /etc/ansible/hosts
+
+# Verify your inventory
+ansible-inventory -i inventory_file_name --list
+
+# Ping the hosts group in inventory
+ansible group_name -m ping -i inventory_file_name
